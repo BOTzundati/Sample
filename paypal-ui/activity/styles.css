@@ -1,6 +1,8 @@
+/* Global */
 * {
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  -webkit-tap-highlight-color: transparent; /* Remove mobile blue highlight */
 }
 
 body {
@@ -15,6 +17,11 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: none; /* Safe focus removal for keyboard users */
 }
 
 /* Tabs */
@@ -266,4 +273,17 @@ a {
 
 .nav-item.active .nav-icon {
   opacity: 1;
+}
+
+/* Links and buttons - prevent tap highlight on mobile */
+a,
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Active states - prevent background flash */
+a:active,
+button:active {
+  background-color: transparent;
 }
