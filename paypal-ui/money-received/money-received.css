@@ -7,6 +7,8 @@
 
 * {
   box-sizing: border-box;
+  /* Remove mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -21,6 +23,12 @@ body {
     Arial,
     sans-serif;
   color: var(--text);
+}
+
+/* Remove ugly focus outlines but keep accessibility for keyboard users */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
 }
 
 .header {
@@ -105,6 +113,8 @@ hr {
   color: var(--link);
   font-size: 14px;
   text-decoration: none;
+  /* Prevent blue highlight when tapped */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .actions {
@@ -154,4 +164,16 @@ hr {
 
 .details-row.total {
   font-weight: 600;
+}
+
+/* Remove tap highlight on images and buttons */
+img,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Optional: remove active background flashes */
+a:active,
+button:active {
+  background-color: transparent;
 }
