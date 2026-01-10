@@ -1,7 +1,23 @@
+/* GLOBAL RESET + MOBILE TAP FIX */
 * {
   box-sizing: border-box;
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
+
+  /* Remove blue tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove focus outline but keep accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/* Prevent active tap background flash */
+a:active,
+button:active {
+  background-color: transparent;
 }
 
 html, body {
@@ -73,6 +89,9 @@ body {
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
+
+  /* Prevent image tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .edit-icon {
@@ -133,6 +152,9 @@ body {
   font-size: 14px;
   text-decoration: none;
   color: black;
+
+  /* Mobile tap fix */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .action-btn img {
@@ -156,6 +178,9 @@ body {
   font-size: 15px;
   text-decoration: none;
   color: black;
+
+  /* Mobile tap fix */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-item img {
@@ -176,6 +201,9 @@ body {
   justify-content: center;
   gap: 10px;
   font-size: 15px;
+
+  /* Mobile tap fix */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .logout img {
@@ -193,6 +221,9 @@ body {
   color: #0a6ed1;
   font-size: 14px;
   text-decoration: none;
+
+  /* Mobile tap fix */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .version {
@@ -200,5 +231,3 @@ body {
   font-size: 13px;
   color: #888;
 }
-
-
