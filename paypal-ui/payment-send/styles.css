@@ -1,3 +1,4 @@
+/* Global reset + mobile tap highlight fix */
 * {
   box-sizing: border-box;
   font-family:
@@ -8,6 +9,9 @@
     Helvetica,
     Arial,
     sans-serif;
+
+  /* Remove blue tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -20,9 +24,25 @@ body {
   color: #000;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Remove mobile focus/active background flash */
+a:active,
+a:focus,
+button:active,
+button:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+/* Keep accessibility for keyboard users */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
 }
 
 /* App */
@@ -213,6 +233,7 @@ a {
   height: 35px;
 }
 
+/* Bottom Navigation */
 .bottom-nav {
   display: flex;
   justify-content: space-around;
@@ -232,6 +253,9 @@ a {
   height: 23px;
   margin-bottom: 4px;
   opacity: 0.6;
+
+  /* Prevent image tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-item.active {
