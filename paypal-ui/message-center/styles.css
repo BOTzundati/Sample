@@ -3,6 +3,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  /* Remove mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ROOT */
@@ -12,6 +15,10 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   background: #F2F6FC;
+  -webkit-touch-callout: none; /* Disable long press menu on iOS */
+  -webkit-user-select: none;   /* Optional: prevent text selection on mobile */
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* APP CONTAINER */
@@ -50,6 +57,8 @@ html, body {
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .back-arrow img {
@@ -122,6 +131,12 @@ html, body {
 .chat-link {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+/* Remove focus outline but keep accessibility */
+.chat-link:focus-visible {
+  outline: none;
 }
 
 /* CHAT CARD */
@@ -130,6 +145,16 @@ html, body {
   border-radius: 16px;
   padding: 14px 16px;
   display: flex;
+
+  /* Optional: prevent text/image selection highlight */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Remove active background highlight on mobile */
+.chat-card:active {
+  background-color: #FFFFFF;
 }
 
 /* LEFT SIDE */
