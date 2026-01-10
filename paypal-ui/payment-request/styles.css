@@ -1,3 +1,4 @@
+/* RESET + MOBILE TAP FIX */
 * {
   box-sizing: border-box;
   font-family:
@@ -8,6 +9,9 @@
     Helvetica,
     Arial,
     sans-serif;
+
+  /* Remove blue tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -20,9 +24,22 @@ body {
   color: #000;
 }
 
+/* LINKS */
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Remove focus outline only when not keyboard navigating */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/* Remove active tap background */
+a:active,
+button:active {
+  background-color: transparent;
 }
 
 /* APP */
@@ -88,6 +105,7 @@ a {
   margin-left: 8px;
 }
 
+/* Icons */
 .icon, .qr {
   width: 20px;
   height: 20px;
@@ -114,6 +132,7 @@ a {
   width: 90px;
 }
 
+/* Avatars */
 .avatar {
   width: 60px;
   height: 60px;
@@ -129,7 +148,7 @@ a {
 }
 
 .avatar.gradient {
-  background: linear-gradient(135deg,#a855f7,#ec4899,#f97316);
+  background: linear-gradient(135deg, #a855f7, #ec4899, #f97316);
   font-size: 26px;
   font-weight: bold;
 }
@@ -204,6 +223,9 @@ h3 {
   height: 23px;
   margin-bottom: 4px;
   opacity: 0.6;
+
+  /* Prevent image tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-item.active {
