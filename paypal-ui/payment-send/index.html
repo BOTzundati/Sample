@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <h1 class="title">Payments</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" role="button" data-tab="send">Send</div>
+      <div class="tab" role="button" data-tab="bills">Bills</div>
+      <div class="tab" role="button" data-tab="request">Request</div>
+    </div>
+
+    <!-- Section title -->
+    <div class="section-title">Send to someone new</div>
+
+    <!-- Search -->
+    <div class="search-row">
+      <div class="search-box">
+        <svg class="icon" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" stroke-width="2"/>
+          <line x1="16.65" y1="16.65" x2="21" y2="21" stroke-width="2"/>
+        </svg>
+        <span class="placeholder">Name, username or email</span>
+      </div>
+
+      <img src="images/qr.png" alt="QR Code" class="qr-icon">
+    </div>
+
+    <!-- Top contacts -->
+    <div class="top-row">
+      <div class="top-title">Top contacts</div>
+
+      <div class="see-all">
+        See All
+        <svg class="chevron" viewBox="0 0 24 24">
+          <polyline points="9 6 15 12 9 18" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="card">
+      <div class="contacts-grid">
+
+        <div class="contact">
+          <div class="avatar absa">MM</div>
+          <div class="name">Monyai Salome</div>
+          <div class="sub">Mokgokong</div>
+        </div>
+
+        <div class="contact">
+          <div class="avatar blue">SM</div>
+          <div class="name">Steve</div>
+          <div class="sub">Marubu</div>
+        </div>
+
+        <div class="contact">
+          <div class="avatar blue">SM</div>
+          <div class="name">Steve</div>
+          <div class="sub">Marubu</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Enable contacts -->
+    <div class="enable-card">
+      <img src="images/enable-your-contacts.png" class="enable-icon" alt="Enable contacts">
+      <span>Enable your contacts</span>
+    </div>
+
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="sticky-bottom">
+    <nav class="bottom-nav">
+      <a href="../index.html" class="nav-item active">
+        <img src="images/home.png" alt="Home">
+        <span>Home</span>
+      </a>
+
+      <a href="../payment-send/index.html" class="nav-item">
+        <img src="images/payments.png" alt="Payments">
+        <span>Payments</span>
+      </a>
+
+      <a href="../wallet-ui/index.html" class="nav-item">
+        <img src="images/wallet.png" alt="Wallet">
+        <span>Wallet</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- TAB NAVIGATION -->
+  <script>
+    document.querySelectorAll(".tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        const type = tab.dataset.tab;
+
+        if (type === "bills") {
+          window.location.href = "../payment-bills/index.html";
+        }
+
+        if (type === "request") {
+          window.location.href = "../payment-request/index.html";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

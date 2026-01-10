@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payments</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <h1 class="title">Payments</h1>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab" data-tab="send">Send</div>
+    <div class="tab" data-tab="bills">Bills</div>
+    <div class="tab active" data-tab="request">Request</div>
+  </div>
+
+  <!-- Search -->
+  <div class="search-box">
+    <svg class="icon" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7" stroke-width="2" fill="none"/>
+      <line x1="16" y1="16" x2="22" y2="22" stroke-width="2"/>
+    </svg>
+    <input placeholder="Name, username or email" />
+    <svg class="qr" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="7" height="7"/>
+      <rect x="14" y="3" width="7" height="7"/>
+      <rect x="3" y="14" width="7" height="7"/>
+      <rect x="14" y="14" width="7" height="7"/>
+    </svg>
+  </div>
+
+  <!-- Top Contacts -->
+  <div class="section-header">
+    <span>Top contacts</span>
+    <span class="see-all">See All ›</span>
+  </div>
+
+  <div class="contacts">
+    <div class="contact">
+      <div class="avatar black">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="7" width="18" height="14"/>
+          <rect x="7" y="3" width="10" height="4"/>
+        </svg>
+      </div>
+      <p>shavatechdev</p>
+    </div>
+
+    <div class="contact">
+      <div class="avatar gradient">#</div>
+      <p>Hash International</p>
+    </div>
+
+    <div class="contact">
+      <img class="avatar-img" src="https://i.imgur.com/6VBx3io.jpg" />
+      <p><strong>Umar</strong><br><span>Farooq Muhammad Jalil</span></p>
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="info-card">
+    <svg viewBox="0 0 24 24">
+      <rect x="4" y="3" width="16" height="18"/>
+      <circle cx="12" cy="10" r="3"/>
+    </svg>
+    <p>Get paid from people you know faster</p>
+  </div>
+
+  <!-- More Ways -->
+  <h3>More ways to get paid</h3>
+
+  <div class="option">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 14L21 3"/>
+      <path d="M15 3h6v6"/>
+      <path d="M14 10L3 21"/>
+    </svg>
+    <div>
+      <strong>Share your link</strong>
+      <span>Text or post your link to get paid.</span>
+    </div>
+  </div>
+
+  <div class="option">
+    <svg viewBox="0 0 24 24">
+      <rect x="4" y="3" width="16" height="18"/>
+      <line x1="7" y1="8" x2="17" y2="8"/>
+      <line x1="7" y1="12" x2="17" y2="12"/>
+    </svg>
+    <div>
+      <strong>Send invoice</strong>
+      <span>Customize, track, and send invoices.</span>
+    </div>
+  </div>
+
+  <div class="option">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 3v18"/>
+      <path d="M8 7l4-4 4 4"/>
+      <path d="M8 17l4 4 4-4"/>
+    </svg>
+    <div>
+      <strong>Split the bill</strong>
+      <span>Easily split any expense.</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Sticky Bottom -->
+<div class="sticky-bottom">
+  <nav class="bottom-nav">
+    <a href="../index.html" class="nav-item active">
+      <img src="images/home.png">
+      <span>Home</span>
+    </a>
+    <a href="../payment-send/index.html" class="nav-item">
+      <img src="images/payments.png">
+      <span>Payments</span>
+    </a>
+    <a href="../wallet-ui/index.html" class="nav-item">
+      <img src="images/wallet.png">
+      <span>Wallet</span>
+    </a>
+  </nav>
+</div>
+
+<!-- TAB NAVIGATION -->
+<script>
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      const type = tab.dataset.tab;
+
+      if (type === "send") {
+        window.location.href = "../payment-send/index.html";
+      }
+
+      if (type === "bills") {
+        window.location.href = "../payment-bills/index.html";
+      }
+
+      if (type === "request") {
+        window.location.href = "../payment-request/index.html";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
