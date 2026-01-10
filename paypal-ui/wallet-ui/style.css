@@ -1,6 +1,10 @@
+/* GLOBAL STYLES */
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
+
+  /* Remove mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
 html, body {
@@ -15,9 +19,17 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  /* Prevent focus/active background flash */
+  outline: none;
 }
 
-/* App Container */
+/* Keep focus visible for accessibility where needed */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/* APP CONTAINER */
 .app {
   width: 100%;
   min-height: 100vh;
@@ -25,7 +37,7 @@ a {
   padding-bottom: 110px;
 }
 
-/* Tabs */
+/* TABS */
 .tabs {
   display: flex;
   gap: 24px;
@@ -44,7 +56,7 @@ a {
   padding-bottom: 6px;
 }
 
-/* Section Header */
+/* SECTION HEADER */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -60,7 +72,7 @@ a {
   font-size: 14px;
 }
 
-/* Cards */
+/* CARDS */
 .cards-wrapper {
   margin-top: 12px;
 }
@@ -90,7 +102,7 @@ a {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Preferences */
+/* PREFERENCES */
 .pref-title {
   margin-top: 24px;
 }
@@ -101,7 +113,7 @@ a {
   padding: 0 12px;
 }
 
-/* Preference Row */
+/* PREFERENCE ROW */
 .pref {
   display: flex;
   gap: 12px;
@@ -129,7 +141,7 @@ a {
   cursor: pointer;
 }
 
-/* Icon */
+/* ICON */
 .icon {
   width: 28px;
   height: 28px;
@@ -144,7 +156,7 @@ a {
   object-fit: contain;
 }
 
-/* Bottom Navigation */
+/* BOTTOM NAVIGATION */
 .bottom-nav {
   position: fixed;
   bottom: 0;
