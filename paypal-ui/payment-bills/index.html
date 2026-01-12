@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payments – Bills</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Payments</h1>
+
+    <div class="tabs">
+      <span class="tab" data-tab="send">Send</span>
+      <span class="tab active" data-tab="bills">Bills</span>
+      <span class="tab" data-tab="request">Request</span>
+    </div>
+  </div>
+
+  <!-- Content Area -->
+  <div class="content">
+
+    <!-- Bills Empty State -->
+    <div class="empty-state">
+      <div class="icon">
+        <img src="images/bills.png" alt="Bills" />
+      </div>
+
+      <p class="empty-text">
+        This is where you’ll see bills you can pay with PayPal like
+        subscriptions and payment requests.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Sticky Bottom -->
+<div class="sticky-bottom">
+  <nav class="bottom-nav">
+    <a href="../index.html" class="nav-item active">
+      <img src="images/home.png" alt="Home">
+      <span>Home</span>
+    </a>
+
+    <a href="../payment-send/index.html" class="nav-item">
+      <img src="images/payments.png" alt="Payments">
+      <span>Payments</span>
+    </a>
+
+    <a href="../wallet-ui/index.html" class="nav-item">
+      <img src="images/wallet.png" alt="Wallet">
+      <span>Wallet</span>
+    </a>
+  </nav>
+</div>
+
+<!-- TAB NAVIGATION -->
+<script>
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      const type = tab.dataset.tab;
+
+      if (type === "send") {
+        window.location.href = "../payment-send/index.html";
+      }
+
+      if (type === "request") {
+        window.location.href = "../payment-request/index.html";
+      }
+
+      // Bills tab stays here
+    });
+  });
+</script>
+
+</body>
+</html>

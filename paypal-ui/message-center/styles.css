@@ -1,0 +1,227 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* Remove mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ROOT */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  background: #F2F6FC;
+  -webkit-touch-callout: none; /* Disable long press menu on iOS */
+  -webkit-user-select: none;   /* Optional: prevent text selection on mobile */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* APP CONTAINER */
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  background: #FFFFFF;
+  padding: 8px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* HEADER TOP ROW */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BACK ARROW */
+.back-arrow {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.back-arrow img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* TITLE (CENTERED) */
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+  text-align: center;
+  flex: 1;
+}
+
+/* SPACER TO BALANCE TITLE */
+.header-spacer {
+  width: 32px;
+}
+
+/* ASSISTANT (SECOND ROW, RIGHT) */
+.assistant {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-end;
+}
+
+.assistant-text {
+  text-align: right;
+}
+
+.help {
+  display: block;
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.ask {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0070E0;
+}
+
+/* SPARKLES */
+.sparkles {
+  display: flex;
+  align-items: center;
+}
+
+.sparkles img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* CHAT LIST */
+.chat-list {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* CHAT LINK */
+.chat-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Remove focus outline but keep accessibility */
+.chat-link:focus-visible {
+  outline: none;
+}
+
+/* CHAT CARD */
+.chat-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+
+  /* Optional: prevent text/image selection highlight */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Remove active background highlight on mobile */
+.chat-card:active {
+  background-color: #FFFFFF;
+}
+
+/* LEFT SIDE */
+.chat-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+/* SPARKLE ICON */
+.sparkle {
+  margin-top: 2px;
+  display: flex;
+}
+
+.sparkle img {
+  width: 16px;
+  height: 16px;
+}
+
+/* CHAT TEXT */
+.chat-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* TITLE + TIME */
+.chat-title-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.chat-time {
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+/* MESSAGE */
+.chat-message {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #4B5563;
+}
+
+/* FOOTER */
+.footer {
+  padding: 20px 24px 28px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #9CA3AF;
+}
+
+.footer a {
+  color: #0070E0;
+  text-decoration: none;
+  font-weight: 500;
+}

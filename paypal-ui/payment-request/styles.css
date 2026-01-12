@@ -1,0 +1,237 @@
+/* RESET + MOBILE TAP FIX */
+* {
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  /* Remove blue tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f2f4f7;
+  color: #000;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove focus outline only when not keyboard navigating */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/* Remove active tap background */
+a:active,
+button:active {
+  background-color: transparent;
+}
+
+/* APP */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 16px;
+  padding-bottom: 200px;
+}
+
+/* Header */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  font-size: 16px;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+.tab.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* Icons */
+.icon, .qr {
+  width: 20px;
+  height: 20px;
+  stroke: #000;
+  fill: none;
+}
+
+/* Contacts */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contacts {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  text-align: center;
+  width: 90px;
+}
+
+/* Avatars */
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.avatar.black {
+  background: #000;
+}
+
+.avatar.gradient {
+  background: linear-gradient(135deg, #a855f7, #ec4899, #f97316);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.avatar-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Info */
+.info-card {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.info-card svg {
+  width: 26px;
+}
+
+/* Options */
+h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.option {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.option svg {
+  width: 26px;
+}
+
+.option span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Sticky Bottom */
+.sticky-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.nav-item img {
+  width: 23px;
+  height: 23px;
+  margin-bottom: 4px;
+  opacity: 0.6;
+
+  /* Prevent image tap highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-item.active {
+  color: #000;
+}
+
+.nav-item.active img {
+  opacity: 1;
+}
