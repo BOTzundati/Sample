@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayPal Dashboard UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- FULLSCREEN LOADING OVERLAY -->
+<div id="loading-screen">
+  <img src="images/loading.jpg" alt="Loading">
+</div>
+
+<div class="app" id="app">
+
+  <!-- Top Right Icons -->
+  <div class="top-icons">
+    <a href="#" class="icon-btn">
+      <img src="images/notifications.png" alt="Notifications">
+    </a>
+
+    <a href="../paypal-ui/profile/index.html" class="icon-btn">
+      <img src="images/profile.png" alt="Profile">
+    </a>
+  </div>
+
+  <!-- Balance Card -->
+  <div class="card balance-card">
+    <div class="paypal-logo">
+      <img src="images/paypal-logo.png" alt="PayPal">
+    </div>
+    <div>
+      <div class="balance-amount">US$883,91</div>
+      <div class="balance-label">PayPal balance</div>
+    </div>
+  </div>
+
+  <!-- Send Again -->
+  <div class="section-title">Send again</div>
+
+  <div class="send-row" id="sendRow">
+    <a href="#" class="send-item">
+      <div class="avatar blue">MM</div>
+      <div class="send-name">Monyai Salome Mok...</div>
+    </a>
+
+    <a href="#" class="send-item">
+      <div class="avatar black">SM</div>
+      <div class="send-name">Steve Marubu</div>
+    </a>
+
+    <a href="#" class="send-item">
+      <div class="avatar no-bg">
+        <img src="images/store.png" alt="Business">
+      </div>
+      <div class="send-name">Wellness on the Spot LLC</div>
+    </a>
+
+    <a href="#" class="send-item">
+      <div class="avatar blue">
+        <img src="images/search.png" alt="Search">
+      </div>
+      <div class="send-name">Search</div>
+    </a>
+  </div>
+
+  <!-- Transaction Card -->
+  <div class="card transaction-card">
+    <div class="transaction-top">
+      <a href="#" class="send-item">
+        <div class="avatar blue1">SM</div>
+      </a>
+
+      <div class="transaction-info">
+        <div class="name">Michael Brown</div>
+        <div class="date">5 Jan 2026</div>
+      </div>
+
+      <div class="amount">+US$882</div>
+    </div>
+
+    <div class="transaction-label">Money received</div>
+
+    <div class="divider"></div>
+    <a href="../paypal-ui/activity/activity.html" class="see-more">See more</a>
+  </div>
+
+</div>
+
+<!-- Sticky Bottom -->
+<div class="sticky-bottom">
+  <div class="actions">
+    <a href="#" class="action-btn">Send</a>
+    <a href="#" class="action-btn">Request</a>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="../paypal-ui/index.html" class="nav-item active">
+      <img src="images/home.png" alt="Home">
+      <span>Home</span>
+    </a>
+
+    <a href="../paypal-ui/payment-send/index.html" class="nav-item">
+      <img src="images/payments.png" alt="Payments">
+      <span>Payments</span>
+    </a>
+
+    <a href="../paypal-ui/wallet-ui/index.html" class="nav-item">
+      <img src="images/wallet.png" alt="Wallet">
+      <span>Wallet</span>
+    </a>
+  </nav>
+</div>
+
+<!-- LOADING SCRIPT -->
+<script>
+  const loader = document.getElementById("loading-screen");
+  const hasLoaded = localStorage.getItem("hasLoaded");
+
+  if (!hasLoaded) {
+    document.body.style.overflow = "hidden";
+
+    setTimeout(() => {
+      loader.classList.add("hide");
+      document.body.style.overflow = "";
+      localStorage.setItem("hasLoaded", "true");
+    }, 5000);
+  } else {
+    loader.remove();
+  }
+</script>
+
+</body>
+</html>

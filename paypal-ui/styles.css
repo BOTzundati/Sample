@@ -1,0 +1,312 @@
+/* RESET + MOBILE TAP FIX */
+* {
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: "PayPal Sans Big Medium";
+  src: url("fonts/PayPal-Sans-Big-Medium-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Remove focus flash */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f2f4f7;
+  color: #000;
+}
+
+/* =========================
+   FULLSCREEN LOADING SCREEN
+========================= */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#loading-screen.hide {
+  animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* App container */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 16px;
+  padding-bottom: 200px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active,
+button:active {
+  background-color: transparent;
+}
+
+/* Top Icons */
+.top-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+/* Balance */
+.balance-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.paypal-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.paypal-logo img {
+  width: 80%;
+  pointer-events: none;
+}
+
+/* Text */
+.balance-amount {
+  font-family: "PayPal Sans Big Medium", system-ui, -apple-system, BlinkMacSystemFont;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.balance-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Send Again */
+.section-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.send-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  cursor: grab;
+  scrollbar-width: none;
+}
+
+.send-row::-webkit-scrollbar {
+  display: none;
+}
+
+.send-item {
+  min-width: 72px;
+  text-align: center;
+}
+
+/* Avatar */
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.avatar img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.avatar.blue {
+  background: #0070e0;
+  color: #fff;
+}
+
+.avatar.blue1 {
+  background: #0070e0;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+}
+
+.avatar.black {
+  background: #111;
+  color: #fff;
+}
+
+.avatar.no-bg {
+  background: #000;
+}
+
+/* Send name */
+.send-name {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* Transaction */
+.transaction-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction-info { flex: 1; }
+.name { font-weight: 600; }
+.date { font-size: 12px; color: #6b7280; }
+.amount { font-weight: 600; color: #16a34a; }
+
+.transaction-label {
+  margin-top: 12px;
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 14px -16px 12px;
+}
+
+.see-more {
+  display: block;
+  text-align: center;
+  color: #0070e0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Sticky Bottom */
+.sticky-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 -6px 16px rgba(0,0,0,0.08);
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  padding: 12px 16px 6px;
+}
+
+.action-btn {
+  flex: 1;
+  background: #000;
+  color: #fff;
+  border-radius: 999px;
+  padding: 14px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.nav-item img {
+  width: 23px;
+  height: 23px;
+  margin-bottom: 4px;
+  object-fit: contain;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.nav-item.active {
+  color: #000;
+}
+
+.nav-item.active img {
+  opacity: 1;
+}
