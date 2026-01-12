@@ -1,0 +1,267 @@
+/* Global reset + mobile tap highlight fix */
+* {
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  /* Remove blue tap highlight on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f2f4f7;
+  color: #000;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove mobile focus/active background flash */
+a:active,
+a:focus,
+button:active,
+button:focus {
+  background-color: transparent;
+  outline: none;
+}
+
+/* Keep accessibility for keyboard users */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/* App */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 16px;
+  padding-bottom: 120px;
+}
+
+/* Title */
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.tab {
+  font-size: 16px;
+  color: #8A8A8A;
+  position: relative;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* Section */
+.section-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* Search */
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.search-box {
+  flex: 1;
+  height: 48px;
+  background: #FFF;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+}
+
+.placeholder {
+  font-size: 15px;
+  color: #9AA0A6;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #8A8A8A;
+}
+
+.qr-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/* Top row */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.top-title {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.see-all {
+  font-size: 15px;
+  color: #4A4A4A;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #4A4A4A;
+}
+
+/* Card */
+.card {
+  background: #FFF;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+/* Contacts */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFF;
+}
+
+.avatar.absa { background: #0B3A8F; }
+.avatar.blue { background: #1A73E8; }
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sub {
+  font-size: 12px;
+  color: #8A8A8A;
+}
+
+/* Enable contacts */
+.enable-card {
+  height: 56px;
+  background: #FFF;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+}
+
+/* Bottom Nav */
+.sticky-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFF;
+  border-top: 1px solid #E5E7EB;
+}
+
+.enable-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 6px 0 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.nav-item img {
+  width: 23px;
+  height: 23px;
+  margin-bottom: 4px;
+  opacity: 0.6;
+
+  /* Prevent image tap highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-item.active {
+  color: #000;
+}
+
+.nav-item.active img {
+  opacity: 1;
+}
