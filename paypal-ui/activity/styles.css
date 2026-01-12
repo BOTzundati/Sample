@@ -1,0 +1,298 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  -webkit-tap-highlight-color: transparent; /* Remove mobile blue highlight */
+}
+
+@font-face {
+  font-family: "PayPal Sans Big Medium";
+  src: url("fonts/PayPal-Sans-Big-Medium-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  background: #f2f5fa;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 140px;
+}
+
+/* Remove link defaults */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: none; /* Safe focus removal for keyboard users */
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+  background: #f2f5fa;
+}
+
+.tab {
+  font-size: 16px;
+}
+
+.tab.inactive {
+  color: #8a8a8a;
+}
+
+.tab.active {
+  font-weight: 600;
+  border-bottom: 3px solid #0a2540;
+  padding-bottom: 6px;
+}
+
+/* Search */
+.search-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 16px;
+}
+
+.search-box {
+  flex: 1;
+  background: #fff;
+  border-radius: 999px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.placeholder {
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  stroke: #6b7280;
+  stroke-width: 2;
+  fill: none;
+}
+
+.filter-btn {
+  width: 40px;
+  height: 40px;
+  background: #f2f5fa;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Section */
+.month {
+  padding: 16px;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* Card Group */
+.card-group {
+  margin: 0 16px 16px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Card */
+.card {
+  padding: 23px;
+  position: relative;
+}
+
+/* Divider */
+.card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* Main Row */
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.info {
+  flex: 1;
+}
+
+.info strong {
+  display: block;
+  font-size: 14px;
+}
+
+.info span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Meta Row */
+.card-meta {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-meta.secondary {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.type {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Note */
+.note {
+  font-size: 13px;
+  color: #374151;
+  margin: 6px 0;
+}
+
+/* Avatars */
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.avatar.black {
+  background: #000;
+  padding: 6px;
+}
+
+.avatar.black img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.avatar.blue {
+  background: #2563eb;
+  color: #fff;
+}
+
+.avatar.bluey {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.avatar.blu {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* Logo */
+.logo {
+  width: 44px;
+  height: 44px;
+}
+
+/* Amount */
+.amount {
+  font-family: "PayPal Sans Big Medium", system-ui, -apple-system, BlinkMacSystemFont;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.negative {
+  color: #000;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+/* Button */
+.track-btn {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.nav-icon {
+  width: 23px;
+  height: 23px;
+  margin-bottom: 4px;
+  opacity: 0.6;
+}
+
+.nav-item.active {
+  color: #000;
+}
+
+.nav-item.active .nav-icon {
+  opacity: 1;
+}
+
+/* Links and buttons - prevent tap highlight on mobile */
+a,
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Active states - prevent background flash */
+a:active,
+button:active {
+  background-color: transparent;
+}

@@ -1,0 +1,239 @@
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Remove mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* HTML & BODY */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  -webkit-touch-callout: none; /* Disable long tap menu on iOS */
+  -webkit-user-select: none;   /* Disable text selection on mobile */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* APP CONTAINER */
+.app {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* HEADER */
+.header {
+  height: 56px;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.back-arrow {
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+/* TITLE */
+.title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* CHAT AREA */
+.chat {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* ASSISTANT INTRO */
+.assistant-intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* SPARKLE */
+.sparkle {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+
+.sparkle img {
+  width: 18px;
+  height: 18px;
+}
+
+/* INTRO TEXT */
+.intro-text {
+  width: 100%;
+}
+
+.intro-text p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+/* USER BUBBLES */
+.bubble.user {
+  background: #eff2f9;
+  padding: 10px 14px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 18px;
+  font-size: 14px;
+  margin: 10px 0;
+  margin-left: auto;
+  width: fit-content;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* ASSISTANT TEXT */
+.assistant-line {
+  font-size: 14px;
+  color: #111111;
+  margin: 8px 0;
+}
+
+/* GREEN S BADGE */
+.agent-badge {
+  width: 22px;
+  height: 22px;
+  background: #006b2d;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assistant-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #111111;
+  margin-top: 8px;
+  width: 90%;
+}
+
+.assistant-text p {
+  margin-bottom: 12px;
+}
+
+.assistant-text ul {
+  padding-left: 20px;
+  margin: 8px 0 12px;
+}
+
+.assistant-text li {
+  margin-bottom: 6px;
+}
+
+/* SYSTEM MESSAGE */
+.system-message {
+  text-align: center;
+  color: #999999;
+  font-size: 13px;
+  margin: 20px 0 40px;
+}
+
+/* SCROLL BUTTON */
+.scroll-btn {
+  position: absolute;
+  bottom: 76px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 18px;
+  background: #f6f6f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+
+  /* Remove tap highlight for scroll button */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* INPUT BAR */
+.input-bar {
+  height: 64px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+
+.input-bar input {
+  flex: 1;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #dadada;
+  padding: 0 14px;
+  font-size: 14px;
+
+  /* Remove focus highlight on mobile */
+  outline: none;
+}
+
+/* MENU ICON */
+.menu {
+  font-size: 20px;
+  color: #000000;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* MEDIA ICONS */
+.media img {
+  width: 28px;
+  height: 28px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* LINKS & BUTTONS - remove blue flash */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: none;
+}
+
+a:active, button:active {
+  background-color: transparent;
+}
